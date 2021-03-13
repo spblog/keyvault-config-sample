@@ -23,7 +23,6 @@ namespace KeyVault.PnP.Job
                 {
                     if (context.HostingEnvironment.IsProduction())
                     {
-                        var builtConfig = config.Build();
                         var secretClient = new SecretClient(new Uri("https://sp-keys.vault.azure.net/"), new DefaultAzureCredential(new DefaultAzureCredentialOptions
                         {
                             ExcludeVisualStudioCredential = true
